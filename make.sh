@@ -7,4 +7,4 @@ BUILD_DATE=`(date "+%Y-%m-%d %H:%M:%S")`
 #-o ${TARGET} ${SOURCE} 
 # export GOPROXY="https://goproxy.io"
 export GOPATH="/mnt/d/go:/home/smirkcat/go"
-go build -trimpath -ldflags "-X \"main.BuildVersion=${COMMIT_HASH}\" -X \"main.BuildDate=${BUILD_DATE}\""
+CGO_ENABLED=1 go build -trimpath -ldflags "-X \"main.BuildVersion=${COMMIT_HASH}\" -X \"main.BuildDate=${BUILD_DATE}\""
