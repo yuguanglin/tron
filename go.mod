@@ -1,4 +1,4 @@
-module tron
+module github.com/yuguanglin/tron
 
 go 1.17
 
